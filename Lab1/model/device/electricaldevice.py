@@ -1,8 +1,11 @@
-class ElectricalDevice:
+from abc import ABC
+
+
+class ElectricalDevice(ABC):
     def __init__(self, name: str, current: int, volt: int) -> None:
-        self.name = name
-        self.current = current
-        self.volt = volt
+        self._name = name
+        self._current = current
+        self._volt = volt
 
     def __str__(self) -> str:
-        return f'Name: {self.name}, that {self.current} in Amper'
+        return f'Name: {self._name}, that {self._current} in Amper'
